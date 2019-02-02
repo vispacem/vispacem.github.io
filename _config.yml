@@ -20,30 +20,30 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : In Data We Trust
+title   : Si vis pacem, para bellum
 description: > # this means to ignore newlines until "Language & timezone"
-  A Blog on data and engineering
+  A Blog on things I'm interested
 
 
 ## => Language and Timezone
 ##############################
 lang: "en" # "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
-timezone: America/Los_Angeles
+timezone: Europe/Madrid
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Yi Wang
+  name      : vispacem
   url       :
   avatar    : # path or url of avatar image
-  bio       : I am a software engineer and analyst.
+  bio       : I am a dilettante person.
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : turing4ever
-  github    : turing4ever
-  linkedin  : turing4ever
+  twitter   : #
+  github    : vispacem
+  linkedin  : #
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name/
@@ -51,7 +51,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: turing4ever/turing4ever.github.io
+repository: vispacem/vispacem.github.io
 repository_tree: master
 
 
@@ -110,7 +110,7 @@ comments:
 
   ## Disqus
   disqus:
-    shortname: turing4ever # the Disqus shortname for the site
+    shortname: vispacem # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
