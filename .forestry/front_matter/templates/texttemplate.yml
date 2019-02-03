@@ -1,0 +1,12 @@
+---
+label: texttemplate
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: first_post
+  label: First post
+  description: help
+  default: sfvxsvvzxv
+  config:
+    required: false
