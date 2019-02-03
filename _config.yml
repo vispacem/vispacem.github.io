@@ -27,7 +27,7 @@ description: > # this means to ignore newlines until "Language & timezone"
 
 ## => Language and Timezone
 ##############################
-lang: # "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
+lang: en # "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
 timezone: Europe/Madrid
 
 
