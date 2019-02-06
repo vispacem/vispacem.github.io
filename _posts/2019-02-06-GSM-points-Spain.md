@@ -11,6 +11,10 @@ Just a few of them.
 
 <div id="visual"></div>
 
+<link href='${resolve('leaflet@1.3.1/dist/leaflet.css')}' rel='stylesheet' />
+<link href='${resolve('https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css')}' rel='stylesheet' />
+<p>loading: <b>leaflet.css</b></p>
+
 <script type="module">
 
   // NOTEBOOK CONFIGURATION
