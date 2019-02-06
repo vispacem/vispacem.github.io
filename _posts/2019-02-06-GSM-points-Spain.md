@@ -23,9 +23,8 @@ Just a few of them.
     "map": "div.fullwidth",
   };
 
-
   // BOILERPLATE
-  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2.0.0/src/module";
   for (let i in renders) {
     let s = renders[i], a = s.match(/^\w+/);
     if (a) {
