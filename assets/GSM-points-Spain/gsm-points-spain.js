@@ -114,7 +114,7 @@ Just a few for test purpose
       //Listener function taking an event object 
       function onMapClick(e) {
       	 //map click event object (e) has latlng property which is a location at which the click occured.
-      alert(1234);
+      //alert(1234);
       }  
 
 
