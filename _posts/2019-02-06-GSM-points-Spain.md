@@ -14,12 +14,13 @@ Just a few of them.
 <script type="module">
 
   // NOTEBOOK CONFIGURATION
-  import notebook from "https://api.observablehq.com/@fil/tissots-indicatrix.js";
+  
+  import notebook from "{{ base.url | prepend: site.url }}/assets/GSM-points-Spain/gsm-points-spain.js";
+  
 
   const target = document.querySelector("#visual");
   const renders = {
-    "viewof p": "p",
-    "display": "div.fullwidth",
+    "map": "div.fullwidth",
   };
 
 
