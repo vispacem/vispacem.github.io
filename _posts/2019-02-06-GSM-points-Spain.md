@@ -9,58 +9,68 @@ tags: cell-towers leafmap
 Just a few of them.
 
 
-<div id="visual"></div>
+ <script src="https://d3js.org/d3.v5.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@observablehq/stdlib"></script>
 
-<link href='${resolve('leaflet@1.3.1/dist/leaflet.css')}' rel='stylesheet' />
-<link href='${resolve('https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css')}' rel='stylesheet' />
-<p>loading: <b>leaflet.css</b></p>
 
-<script type="module">
+  <svg id="packSVG" width=932 height=932 viewBox="0,0,932,932"></svg>
+  <script>
+    const color = d3.scaleSequential(d3.interpolateMagma).domain([8, 0]);
+    const format = d3.format(",d");
+    const width = 932;
+    const height = width;
+    const pack = data => d3.pack()
+    .size([width - 2, height - 2])
+    .padding(3)
+    (d3.hierarchy(data)
+     .sum(d => d.size)
+     .sort((a, b) => b.value - a.value));
+    const {DOM, require} = new observablehq.Library;
 
-  // NOTEBOOK CONFIGURATION
-  
-  import notebook from "{{ base.url | prepend: site.url }}/assets/GSM-points-Spain/gsm-points-spain.js";
-  
+		require()('@observablehq/flare')
+      .then(data => {
+      const root = pack(data);
 
-  const target = document.querySelector("#visual");
-  const renders = {
-    "map": "div.fullwidth",
-  };
+      const svg = d3.select('#packSVG')
+      .style("font", "10px sans-serif")
+      .style("width", "100%")
+      .style("height", "auto")
+      .attr("text-anchor", "middle");
 
-  // BOILERPLATE
-  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2.0.0/src/module";
-  for (let i in renders) {
-    let s = renders[i], a = s.match(/^\w+/);
-    if (a) {
-      renders[i] = document.createElement(a[0]);
-      target.appendChild(renders[i]);
-      if (a = s.match(/\.(\w+)$/))
-        renders[i].className = a[1]; 
-    }
-    else
-      renders[i] = document.querySelector(renders[i]);
-  }
-  Runtime.load(notebook, (variable) => {
-    if (renders[variable.name]) {
-      return new Inspector(renders[variable.name]);
-    } else {
-      // return true; // uncomment to run hidden cells
-    }
-  });
-</script>
+      const node = svg.selectAll("g")
+      .data(root.descendants())
+      .enter().append("g")
+      .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
 
-<style>
-/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
-.fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-#visual { min-height: 40vw }
-</style>
+      node.append("circle")
+        .attr("r", d => d.r)
+        .attr("fill", d => color(d.height));
+
+      const leaf = node.filter(d => !d.children);
+
+      leaf.select("circle")
+        .attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
+        .attr("stroke", "#000");
+
+      leaf.append("clipPath")
+        .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
+        .append("use")
+        .attr("xlink:href", d => d.leafUid.href);
+
+      leaf.append("text")
+        .attr("clip-path", d => d.clipUid)
+        .selectAll("tspan")
+        .data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g))
+        .enter().append("tspan")
+        .attr("x", 0)
+        .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
+        .text(d => d);
+
+      node.append("title")
+        .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+    });
+  </script>
+
 
 End.
 
