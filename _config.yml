@@ -180,6 +180,15 @@ local_search:
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
+## => Search
+##############################
+search:
+  provider: default # "default" (default), false, "google", "custom"
+
+  ## Google Custom Search Engine
+  google:
+    custom_search_engine_id: # Google Custom Search Engine ID
+
 
 defaults:
   - scope:
