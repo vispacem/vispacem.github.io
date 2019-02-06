@@ -1,7 +1,8 @@
 ---
-second_post: Application to view San Francisco telephone database
+title: San Francisco cell towers
 date: 2019-02-06 22:15:09 +0000
-tags: telephone 
+key: 20190206 
+tags: cell-towers datasette leafmap
 ---
 
 # Application to view San Francisco telephone database:
