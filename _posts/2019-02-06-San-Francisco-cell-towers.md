@@ -5,17 +5,21 @@ key: 20190206
 tags: cell-towers datasette leafmap
 ---
 
-# San Francisco cell towers:
+## San Francisco cell towers with datasette:
 
 <https://datasette-adcsdgjfvc.now.sh/sf-cell-towers-67ed8ca/SF+Cell+Towers>
 
 We just need to get the database. Everything else is done thanks to:
+
+## datasette:
 
 <https://github.com/simonw/datasette>
 
 The author has put the entire app into a docker of less than 100M.
 
 You can make a almost instantaneous deployment of that docker in:
+
+## zeit.co:
 
 <https://zeit.co/>
 
