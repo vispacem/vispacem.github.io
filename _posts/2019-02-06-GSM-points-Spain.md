@@ -14,7 +14,7 @@ Just a few of them.
 <script type="module">
 
 import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
-import notebook from "{{ base.url | prepend: site.url }}/assets/gsm-points-spain.js";
+import notebook from "{{ base.url | prepend: site.url }}/assets/GSM-points-Spain/gsm-points-spain.js";
 
 Runtime.load(notebook, Inspector.into(document.body));
 
