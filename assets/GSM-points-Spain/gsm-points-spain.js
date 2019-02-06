@@ -1,5 +1,5 @@
 const m0 = {
-  id: "5e8e149677a863e8@218",
+  id: "5e8e149677a863e8@219",
   variables: [
     {
       inputs: ["md"],
@@ -11,18 +11,18 @@ Just a few for test purpose
     },
     {
       name: "map",
-      inputs: ["DOM","width","L","pointsGSM","alert"],
-      value: (function*(DOM,width,L,pointsGSM,alert)
+      inputs: ["DOM","width","L","pointsGSM"],
+      value: (function*(DOM,width,L,pointsGSM)
 {
   let container = DOM.element('div', { style: `width:${width}px;height:${width/1.6}px` });
-
+  
   yield container;
-
+  
   let map = L.map(container).setView([40,-3.7], 7);
-
-
+  
+  
   // see   https://beta.observablehq.com/@mradamcox/wi-spring-viewer
-
+  
   let latlongpopup = L.popup({'className' : 'latlong-popup'});
   map.on("contextmenu", function (event) {
     let latitude = event.latlng.lat.toFixed(4);
@@ -34,10 +34,10 @@ Just a few for test purpose
         .setContent(latitude+', '+longitude+'<br>zoom level: '+map.getZoom()+gmlink)
         .openOn(map);
   });  
+  
 
-
-
-
+  
+  
   let osmLayer = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}@2x.png', {
       attribution: 'Wikimedia maps beta | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
@@ -46,27 +46,27 @@ Just a few for test purpose
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
   });
-
-
+  
+ 
     let markerList = [];
     let currentLayer = L.markerClusterGroup({
         chunkedLoading: true,
         maxClusterRadius: 50
     });
-
+  
        for (var i=0; i< pointsGSM.features.length ;i++)  {
-
+        
               let marker = L.marker(L.latLng(pointsGSM.features[i].properties.Gis_Latitud,
                                              pointsGSM.features[i].properties.Gis_Longitud),
               {
                  // title: title
               });
 
-
-
+   
+         
          var list = 
          //   "<b>" + pointsGSM.features[i].properties.Gis_Codigo + "</b>" + "</br>"
-
+         
          "<strong style='color: #84b819'>" + pointsGSM.features[i].properties.Gis_Codigo + "</strong>" + "</br>"
           + "<br>"
           + "<b>Dirección:&nbsp;</b>" + pointsGSM.features[i].properties.Dirección + "</br>"
@@ -80,44 +80,44 @@ Just a few for test purpose
        //  marker.bindPopup(title);
          markerList.push(marker);
        }
+  
 
-
-
-
+  
+  
   currentLayer.addLayers(markerList);
-
+  
   map.addLayer(currentLayer);
-
-
+  
+  
   let baseLayers = {
-
+  
     "osm":osmLayer,
     "google":googleMap,
-
+    
   };
-
-
+  
+  
   let overlayLayers = {
   };
-
-
+ 
+  
   let c_layers = new L.control.layers(baseLayers, overlayLayers,{position:'topright',collapsed:true})
   map.addControl(c_layers);
 
   // Add the initial state. The order is no longer important.
 //  osmLayer.addTo(map);
 //  googleMap.addTo(map);
-
+  
  map.on('click', onMapClick);
-
-
+  
+  
       //Listener function taking an event object 
       function onMapClick(e) {
       	 //map click event object (e) has latlng property which is a location at which the click occured.
       //alert(1234);
       }  
-
-
+  
+  
    }
 )
     },
@@ -161,7 +161,7 @@ require("d3@5")
 };
 
 const notebook = {
-  id: "5e8e149677a863e8@218",
+  id: "5e8e149677a863e8@219",
   modules: [m0]
 };
 
