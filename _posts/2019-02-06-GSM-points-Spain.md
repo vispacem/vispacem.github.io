@@ -8,18 +8,15 @@ tags: cell-towers leafmap
 
 Just a few of them.
 
+<script type="module">
 
+import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
 
-<script type=module>
+import notebook from "{{ base.url | prepend: site.url }}/assets/GSM-points-Spain/gsm-points-spain.js";
 
-import {Runtime, Inspector} from "https://unpkg.com/@observablehq/runtime@3/dist/runtime.js";
-import define from "https://api.observablehq.com/@tmcw/hello-world.js?v=3";
-
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
+Runtime.load(notebook, Inspector.into(document.body));
 
 </script>
-
 
 End.
 
