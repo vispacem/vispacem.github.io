@@ -1,6 +1,7 @@
 ---
 title: GSM points in Spain
 date: 2019-02-06 23:15:09 +0000
+key: 20190206c
 tags: cell-towers leafmap
 ---
 
