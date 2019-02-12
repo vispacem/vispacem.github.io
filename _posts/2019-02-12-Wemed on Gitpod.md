@@ -24,7 +24,7 @@ Current version: 0.5
 </summary>
 <p>
 
-```DOCKERFILE
+```
 
 FROM gitpod/workspace-full-vnc:latest
 
