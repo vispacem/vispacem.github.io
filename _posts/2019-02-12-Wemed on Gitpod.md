@@ -24,8 +24,7 @@ Current version: 0.5
 </summary>
 <p>
 
-```
-
+<pre>
 FROM gitpod/workspace-full-vnc:latest
 
 USER root
@@ -40,8 +39,7 @@ RUN  apt-get update \
   && make \
   && make install \
   && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
-  
-```
+</pre>
 
 </p>
 </details>
