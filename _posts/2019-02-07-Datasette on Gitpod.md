@@ -1,7 +1,7 @@
 ---
 title: Datasette on Gitpod
-date: 2019-07-06 23:15:09 +0000
-key: 20190706b
+date: 2019-02-07 23:15:09 +0000
+key: 20190207b
 tags: Datasette Gitpod
 ---
 
