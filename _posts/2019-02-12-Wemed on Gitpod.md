@@ -9,7 +9,7 @@ tags: Wemed Gitpod
 
 ## *wemed
 
-http://wemed.ohwg.net/
+<http://wemed.ohwg.net/>
 
 _A multipart MIME document viewer and editor_
 
