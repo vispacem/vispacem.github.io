@@ -31,5 +31,60 @@ Runtime.load(notebook, (variable) => {
 
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="visual"></div>
+
+<script type="module">
+
+  // NOTEBOOK CONFIGURATION
+  import notebook from "https://beta.observablehq.com/d/40603915d17a847a";  
+
+  const target = document.querySelector("#visual");
+  const renders = {
+ 
+    "viewof view": "div.fullwidth",
+  };
+
+
+  // BOILERPLATE
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1.2.0?module";
+  for (let i in renders) {
+    let s = renders[i], a = s.match(/^\w+/);
+    if (a) {
+      renders[i] = document.createElement(a[0]);
+      target.appendChild(renders[i]);
+      if (a = s.match(/\.(\w+)$/))
+        renders[i].className = a[1]; 
+    }
+    else
+      renders[i] = document.querySelector(renders[i]);
+  }
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name]) {
+      return new Inspector(renders[variable.name]);
+    } else {
+      // return true; // uncomment to run hidden cells
+    }
+  });
+</script>
+
  
 
