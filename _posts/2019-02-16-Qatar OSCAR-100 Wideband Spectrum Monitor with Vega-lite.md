@@ -15,6 +15,12 @@ Very easy way to display websockets with vega-lite
 
 <script type="module"> 
 
+
+const wss = new WebSocket('wss://demos.kaazing.com/echo')
+wss.onmessage = (msg) => console.log(msg)
+setTimeout(() => wss.send('ping'), 1000)
+
+
 import notebook from "https://beta.observablehq.com/d/40603915d17a847a";  
 
 document.querySelector('.notebook-content').innerHTML =notebook.modules[0].variables
