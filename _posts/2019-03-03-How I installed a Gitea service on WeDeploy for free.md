@@ -64,5 +64,5 @@ Next I filled the *Git repository URL* and the *Project ID* fields.
 
 And after a few minutes all worked.
 
-The trick was the line:  "port": 22, *db/webdeploy.json*. This port is used for SSL porposes.
+The trick was the line:  "port": 22, *db/wedeploy.json*. This port is used for SSL porposes.
 
