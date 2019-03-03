@@ -23,7 +23,7 @@ COPY --from=healthcheck/mysql:latest /usr/local/bin/docker-healthcheck /usr/loca
 HEALTHCHECK CMD ["docker-healthcheck"]
 ```
 
-*db/webdeploy.json*
+*db/wedeploy.json*
 
 ```
 {
@@ -42,7 +42,7 @@ HEALTHCHECK CMD ["docker-healthcheck"]
 }
 ```
 
-*gitea/webdeploy.json*
+*gitea/wedeploy.json*
 
 ```
 {
