@@ -1,5 +1,5 @@
 ---
-title: How I installed nod-red on WeDeploy for free.
+title: How I installed node-red on WeDeploy for free.
 date: 2019-03-03 15:15:09 +0000
 key: 20190303b
 tags: node-red
@@ -68,7 +68,7 @@ Next I filled the *Git repository URL* and the *Project ID* fields.
 
 And after a few seconds the program worked.
 
-[Here](https://nodered.org/docs/security) are the instructions for use a password in node-red.
+[Here](https://nodered.org/docs/security) are the instructions for use a password in node-red:
 
 ```
 node -e "console.log(require('bcryptjs').hashSync(process.argv[1], 8));" your-password-here
