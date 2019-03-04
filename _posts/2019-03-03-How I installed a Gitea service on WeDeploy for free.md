@@ -50,6 +50,9 @@ HEALTHCHECK CMD ["docker-healthcheck"]
   "image": "gitea/gitea:1.7.1",
   "port": 3000,
   "dependencies": ["db"],
+  "volumes": {
+    "data": "/data/gitea"
+  },
   "zeroDowntime": true
 }
 ```
