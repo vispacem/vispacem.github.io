@@ -211,3 +211,4 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - jekyll-remote-theme
+  - jsfiddle
