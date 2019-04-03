@@ -7,6 +7,9 @@ tags: Abelian Sandpile
 
 ## Abelian Sandpile
 
+All credits to Mike Bostock:
+https://observablehq.com/@mbostock/abelian-sandpile
+
 <div class="notebook-content">
   
 </div>
@@ -28,3 +31,4 @@ Runtime.load(notebook, (variable) => {
 
 
 </script>
+
