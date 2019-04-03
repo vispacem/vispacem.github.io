@@ -16,7 +16,7 @@ tags: Abelian Sandpile
   import { Runtime } from "https://unpkg.com/@observablehq/notebook-runtime?module";
   // Import the notebook.
   import notebook from "https://api.observablehq.com/d/8053a86c4aaa320e.js";
-  // Load the notebook, and render any cells which start with "rendered_".
+  // Load the notebook, and render any cells which start with "canvas".
   Runtime.load(notebook, (cell) => {
     if (cell.name && cell.name.startsWith('rendered_')) {
       return {
