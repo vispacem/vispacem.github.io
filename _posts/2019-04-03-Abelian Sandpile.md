@@ -7,26 +7,24 @@ tags: Abelian Sandpile
 
 ## Abelian Sandpile
 
+<div class="notebook-content">
+  
+</div>
+
+<script type="module"> 
+
+import notebook from "https://api.observablehq.com/d/8053a86c4aaa320e.js";  //  "download code" url
+
+document.querySelector('.notebook-content').innerHTML =notebook.modules[0].variables
+.filter(d=>d)
+.map((d,i)=>` <div class=" observable-wrapper div-number-${i}"></div>`)
+.join(''); 
+
+import {Inspector, Runtime} from "https://unpkg.com/@observablehq/runtime@3/dist/runtime.js"; 
+let i=1;
+Runtime.load(notebook, (variable) => { 
+  return new Inspector(document.querySelector(`.observable-wrapper:nth-child(${i++})`));
+ }); 
 
 
-
-
-<script type="module">
-  // Load the Observable Runtime.
-  import { Runtime } from "https://unpkg.com/@observablehq/notebook-runtime?module";
-  // Import the notebook.
-  import notebook from "https://api.observablehq.com/d/8053a86c4aaa320e.js";
-  // Load the notebook, and render any cells which start with "canvas".
-  Runtime.load(notebook, (cell) => {
-    if (cell.name && cell.name.startsWith('rendered_')) {
-      return {
-        fulfilled: (value) => {
-          if (value instanceof HTMLElement) {
-            document.body.appendChild(value);
-          }
-        }
-      };
-    }
-  });
 </script>
-
