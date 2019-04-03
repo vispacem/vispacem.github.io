@@ -7,8 +7,7 @@ tags: Abelian Sandpile
 
 ## Abelian Sandpile
 
-All credits to Mike Bostock:
-https://observablehq.com/@mbostock/abelian-sandpile
+All credits to Mike Bostock: **_[https://observablehq.com/@mbostock/abelian-sandpile](https://observablehq.com/@mbostock/abelian-sandpile)_**
 
 <div class="notebook-content">
   
