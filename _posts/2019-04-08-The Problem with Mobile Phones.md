@@ -144,6 +144,6 @@ Governments have also become interested in analyzing [data![img](https://ssd.eff
 
 A few examples of things that a government might try to figure out from data analysis: automatically figuring out whether people know each other; detecting when one person uses multiple phones, or switches phones; detecting when groups of people are traveling together or regularly meeting one another; detecting when groups of people use their phones in unusual or suspicious ways; identifying the confidential sources of a journalist.
 
-<a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.jekyll_platform}}">Jekyll</a> is my favorite tool for building websites.
+
 
 
