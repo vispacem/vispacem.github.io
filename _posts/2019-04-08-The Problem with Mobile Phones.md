@@ -143,3 +143,7 @@ This software can be useful to protect against data being obtained if your phone
 Governments have also become interested in analyzing [data![img](https://ssd.eff.org/sites/all/themes/ssd/img/info.png)](https://ssd.eff.org/en/glossary/data) about many users' phones by computer in order to find certain patterns automatically. These patterns could allow a government analyst to find cases in which people used their phones in an unusual way, such as taking particular privacy precautions.
 
 A few examples of things that a government might try to figure out from data analysis: automatically figuring out whether people know each other; detecting when one person uses multiple phones, or switches phones; detecting when groups of people are traveling together or regularly meeting one another; detecting when groups of people use their phones in unusual or suspicious ways; identifying the confidential sources of a journalist.
+
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.jekyll_platform}}">Jekyll</a> is my favorite tool for building websites.
+
+
