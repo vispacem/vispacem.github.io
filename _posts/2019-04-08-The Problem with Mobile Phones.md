@@ -1,15 +1,11 @@
 ---
-title: First post
+title: The Problem with Mobile Phones
 date: 2019-04-08 22:13:09 +0000 
 key: 20190408
 tags: phones 
 ---
 
-# The Problem with Mobile Phones
-
 From <https://ssd.eff.org/en/module/problem-mobile-phones>
-
-
 
 Last reviewed: 
 
