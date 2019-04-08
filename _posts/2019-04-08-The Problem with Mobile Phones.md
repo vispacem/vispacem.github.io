@@ -19,7 +19,7 @@ Some of these problems can be addressed by using third-party privacy software—
 
  
 
-## Location Tracking [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#1)
+## Location Tracking 
 
 The deepest privacy [threat![img](https://ssd.eff.org/sites/all/themes/ssd/img/info.png)](https://ssd.eff.org/en/glossary/threat) from mobile phones—yet one that is often completely invisible—is the way that they announce your whereabouts all day (and all night) long through the signals they broadcast. There are at least four ways that an individual phone's location can be tracked by others.
 
@@ -65,7 +65,7 @@ The *Washington Post* reported in December 2013 on NSA location-tracking tools t
 
  
 
-## Turning Phones off [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#2)
+## Turning Phones off 
 
 There's a widespread concern that phones can be used to monitor people even when not actively being used to make a call. As a result, people having a sensitive conversation are sometimes told to turn their phones off entirely, or even to remove the batteries from their phones.
 
@@ -75,7 +75,7 @@ Turning phones off has its own potential disadvantage: if many people at one loc
 
  
 
-## Burner Phones [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#3)
+## Burner Phones 
 
 Phones that are used temporarily and then discarded are often referred to as burner phones or burners. People who are trying to avoid government surveillance sometimes try to change phones (and phone numbers) frequently to make it more difficult to recognize their communications. They will need to use prepaid phones (not associated with a personal credit card or bank account) and ensure that the phones and SIM cards were not registered with their identity; in some countries these steps are straightforward, while in others there may be legal or practical obstacles to obtaining anonymous mobile phone service.
 
@@ -89,7 +89,7 @@ Together, these facts mean that effective use of burner phones to hide from gove
 
  
 
-## A Note About GPS [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#4)
+## A Note About GPS 
 
 The Global Positioning System (GPS) lets devices anywhere in the world figure out their own locations quickly and accurately. GPS works based on analyzing signals from satellites that are operated by the U.S. government as a public service for everyone. It's a common misconception that these satellites somehow watch GPS users or know where the GPS users are. In fact, the GPS satellites only transmit signals; the satellites don't receive or observe anything from your phone, and the satellites and GPS system operators do not know where any particular user or device is located, or even how many people are using the system.
 
@@ -99,7 +99,7 @@ So, why do we speak of “GPS tracking”? Usually, this tracking is done by app
 
  
 
-## Spying on Mobile Communications [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#5)
+## Spying on Mobile Communications 
 
 Mobile phone networks were not originally designed to use technical means to protect subscribers' calls against eavesdropping. That meant that anybody with the right kind of radio receiver could listen in on the calls.
 
@@ -113,7 +113,7 @@ The situation can be different when you are using secure communications apps to 
 
  
 
-## Infecting Phones with Malware [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#6)
+## Infecting Phones with Malware 
 
 Phones can get viruses and other kinds of malware ([malicious software![img](https://ssd.eff.org/sites/all/themes/ssd/img/info.png)](https://ssd.eff.org/en/glossary/malware)), either because the user was tricked into installing malicious software, or because someone was able to hack into the device using a security flaw in the existing device software. As with other kinds of computing device, the malicious software can then spy on the device's user.
 
@@ -127,7 +127,7 @@ As we discussed above, precautions based on powering off phones could be noticed
 
  
 
-## Forensic Analysis of Seized Phones [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#7)
+## Forensic Analysis of Seized Phones 
 
 There is a well-developed specialty of forensic analysis of mobile devices. An expert analyst will connect a seized device to a special machine, which reads out [data![img](https://ssd.eff.org/sites/all/themes/ssd/img/info.png)](https://ssd.eff.org/en/glossary/data) stored inside the device, including records of previous activity, phone calls, and text messages. The forensic analysis may be able to recover records that the user couldn't normally see or access, such as deleted text messages, which can be undeleted. Forensic analysis can sometimes bypass  screen locking, especially on older phones.
 
