@@ -137,7 +137,7 @@ This software can be useful to protect against data being obtained if your phone
 
  
 
-## Computer Analysis of Patterns of Phone use [Anchor link](https://ssd.eff.org/en/module/problem-mobile-phones#8)
+## Computer Analysis of Patterns of Phone use 
 
 Governments have also become interested in analyzing [data![img](https://ssd.eff.org/sites/all/themes/ssd/img/info.png)](https://ssd.eff.org/en/glossary/data) about many users' phones by computer in order to find certain patterns automatically. These patterns could allow a government analyst to find cases in which people used their phones in an unusual way, such as taking particular privacy precautions.
 
