@@ -5,7 +5,7 @@ key: 20190408
 tags: phones 
 ---
 
-From <https://ssd.eff.org/en/module/problem-mobile-phones> [![Foo](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+From <https://ssd.eff.org/en/module/problem-mobile-phones> [![Foo](https://licensebuttons.net/l/by/3.0/us/88x31.png)](http://creativecommons.org/licenses/by/3.0/us/)
 
 Last reviewed: 
 
