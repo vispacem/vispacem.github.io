@@ -8,7 +8,7 @@ tags: The_Ken_Thompson_Hack
 
 # [The Ken Thompson Hack](http://c2.com/cgi/fullSearch?search=TheKenThompsonHack)
 
-From [http://wiki.c2.com/?TuringAward](http://wiki.c2.com/?TheKenThompsonHack)
+From [http://wiki.c2.com/?TheKenThompsonHack](http://wiki.c2.com/?TheKenThompsonHack)
 
 Last edit August 18, 2014
 
