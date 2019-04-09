@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+<title>ElGrapho     test</title>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@observablehq/notebook-inspector@1/dist/notebook-inspector-style.css">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/highlight.js@9.15.6/styles/color-brewer.css">
+<style>
+.myInspect-pinned {
+  border: 1px solid #aaa;
+  margin: 10px 0px 0px 0px;
+}
+.myInspect-unpinned {
+  border: 1px solid #eee;
+  margin: 10px 0px 0px 0px;
+}
+.myInspect-source, .myInspect-source pre {
+  margin: 0px;
+  overflow-wrap: break-word;
+   white-space: pre-wrap;       /* css-3 */
+   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+   white-space: -pre-wrap;      /* Opera 4-6 */
+   white-space: -o-pre-wrap;    /* Opera 7 */
+   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+.myInspect-source {
+  padding: 5px 10px 5px 10px;
+}
+.myInspect-source-pinned, .myInspect-source-pinned .hljs {
+  background-color: #f7f7ff;
+  color: #220;
+}
+.myInspect-source-unpinned, .myInspect-source-unpinned .hljs {
+  cursor: pointer;
+  background-color: #fff7f7;
+  color: #333;
+}
+</style>
+</head>
+<body>
+<script type="module">
+import * as observable from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
+import notebook from "./notebook.js";
+
+// The function "loadWithSource" is modified from:
+// https://github.com/observablehq/runtime/blob/9019bfef749255b5ae14d8dad8dfc2d91f88bad9/src/load.js#L4
+// see the license at:
+// https://github.com/observablehq/runtime/blob/master/LICENSE
+function loadWithSource(notebook, library, observer) {
+  if (typeof library == "function") observer = library, library = null;
+  if (typeof observer !== "function") throw new Error("invalid observer");
+  if (library == null) library = new observable.Library();
+
+  const {modules, id, nodes} = notebook;
+  const map = new Map;
+  const runtime = new observable.Runtime(library);
+  const main = runtime_module(id);
+
+  function runtime_module(id) {
+    let module = map.get(id);
+    if (!module) map.set(id, module = runtime.module());
+    return module;
+  }
+
+  for (const m of modules) {
+    const module = runtime_module(m.id);
+    for (let i = 0; i < m.variables.length; i++) {
+      const v = m.variables[i];
+      if (module === main) // attach node object to variable
+        v.node = nodes.find(({id}) => id === v.node_id);
+      if (v.from) { // import cell
+        module.import(v.remote, v.name, runtime_module(v.from));
+        if (module === main) { // imitate Observable's output for an import with a fake cell
+          module.variable(observer(v, i, m.variables))
+            .define(`import ${v.name}`, ["html"], 
+                    (function(html){return(html`
+<pre>import <a href="${v.from.match(/\//) ? '/'+v.from : '/d/'+v.from}">${v.from}
+`)}));
+          // only show this fake cell once for each import
+          while (i+1 < m.variables.length && m.variables[i+1].from === v.from) {
+            const nextImport = m.variables[++i];
+            module.import(nextImport.remote, nextImport.name, runtime_module(v.from));
+          }
+        }
+      }
+      else if (module === main) { // only attach observers to variables in the main module
+        if (v.node === undefined) console.log(`missing node object at variable ${i}: ${JSON.stringify(v)}`);
+        // comment-only cell: (observer is actually an observer factory)
+        if (!v.value) module.variable(observer(v, i, m.variables))
+          .define(null, ["md"], (function(md){return(md`\`\`\`js
+${v.node.value}
+\`\`\``)}));
+        else {
+          if (v.name && v.name.startsWith('initial ')) { // mutable cell 
+            // (assumes variables come in the order initial Y -> mutable Y -> Y)
+            module.variable().define(v.name, v.inputs, v.value); // initial Y
+            const v1 = m.variables[++i]; // mutable Y
+            module.variable().define(v1.name, v1.inputs, v1.value);
+            const v2 = m.variables[++i]; // Y
+            v2.node = v.node;
+            module.variable(observer(v2, i-2, m.variables)).define(v2.name, v2.inputs, v2.value);
+          } 
+          else {
+            module.variable(observer(v, i, m.variables)).define(v.name, v.inputs, v.value);            
+            if (v.name && v.name.startsWith('viewof ')) { // viewof cell 
+              // (assumes variables come in the order viewof X -> X)
+              const v1 = m.variables[++i]; // X
+              v1.node = v.node;
+              module.variable().define(v1.name, v1.inputs, v1.value);
+            }
+          }
+        }
+      }
+      else module.define(v.name, v.inputs, v.value); // dependencies in imported modules
+    }
+  }
+  return runtime;
+}
+// The function "intoWithSource" is modified from:
+// https://github.com/observablehq/inspector/blob/115a96dd78d41f7fbebc0260155aa9ec90cccca3/src/index.js#L51
+// see the license at: 
+// https://github.com/observablehq/inspector/blob/master/LICENSE
+function intoWithSource(container, prefix="myInspect", md) {
+  if (typeof container === "string") {
+    container = document.querySelector(container);
+    if (container == null) throw new Error("container not found");
+  }
+  return function(v) { // supplied inputs are variable, array index, array of all variables
+    const newContainer = container.appendChild(document.createElement("div"));
+    const newdiv = newContainer.appendChild(document.createElement("div"));
+    if (v.node !== undefined) { // if node not attached, this'll just act like the default inspector
+      newContainer.setAttribute("id", `${prefix}-node-${v.node.id}`)
+      newdiv.setAttribute("class", v.node.pinned ?
+                          `${prefix}-pinned` :
+                          `${prefix}-unpinned`);
+      if (v.from || v.value) { // show source if not comment-only cell
+        const sourcediv = newContainer.appendChild(document.createElement("div"));
+        sourcediv.setAttribute(
+          "class",
+          `${prefix}-source ${v.node.pinned ?
+          `${prefix}-source-pinned` :
+          `${prefix}-source-unpinned`}`);
+        if (v.node.pinned) sourcediv.appendChild(md`\`\`\`js
+${v.node.value}
+\`\`\``);
+        else sourcediv.addEventListener('click', event => {
+          if (sourcediv.firstChild) sourcediv.firstChild.remove();
+          else sourcediv.appendChild(md`\`\`\`js
+${v.node.value}
+\`\`\``);
+        });
+      }
+    }
+    return new observable.Inspector(newdiv);
+  };
+}
+
+const {md} = new observable.Library();
+md().then(md => {
+  loadWithSource(notebook, intoWithSource(document.body, "myInspect", md));
+});
+</script>
+</body>
+</html>
