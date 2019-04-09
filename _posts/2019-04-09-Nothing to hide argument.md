@@ -34,7 +34,7 @@ During a qualitative study conducted for the [government of the United Kingdom](
 
 ## Arguments for and against
 
-## Against privacy
+### Against privacy
 
 [Eric Schmidt](https://en.wikipedia.org/wiki/Eric_Schmidt), the CEO of [Google](https://en.wikipedia.org/wiki/Google) at the time, said "If you have something that you don't want anyone to know, maybe you shouldn't be doing it in the first place, but if you really need that kind of privacy, the reality is that search engines including Google do retain this information for some time, and it's important, for example that we are all subject in the United States to the [Patriot Act](https://en.wikipedia.org/wiki/Patriot_Act). It is possible that that information could be made available to the authorities."
 
