@@ -1,6 +1,6 @@
 ---
 title: Commit messages guide
-date: 2019-04-11 23:15:09 +0000
+date: 2019-04-21 23:15:09 +0000
 key: 20190421
 tags: guide
 ---
