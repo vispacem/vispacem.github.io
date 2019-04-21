@@ -25,17 +25,9 @@ Stallman firmly believes that only free software can save us from our technology
 
 Stallman founded the free software movement in the early- to mid-1980s with the creation of the GNU project and the [Free Software Foundation](http://www.fsf.org/), of which he is still president.
 
-**ON BOARD:** [Microsoft: 'We love open source'](http://www.networkworld.com/news/2010/082310-microsoft-open-source.html)
-
-
-
 When I asked Stallman to list some of the successes of the free software movement, the first thing that came up was [Android](http://www.networkworld.com/community/blog/android-22-motorola-droid-first-impressions-f) -- not Google's version of Android, but rather a third-party version of the mobile OS in which all proprietary software has been stripped out (see also: [Stallman supports LibreOffice](http://www.networkworld.com/community/blog/libreoffice-gets-free-software-stamp-approval)).
 
-**[ Become a Microsoft Office 365 administrator in record time with this quick start course from PluralSight. ]**
-
 "It just recently became possible to run some very widely used phones with free software," Stallman said. "There's a version of Android called [Replicant](http://trac.osuosl.org/trac/replicant) that can run on the HTC Dream phone without proprietary software, except in the U.S. In the U.S., as of a few weeks ago there was still a problem in some dialing library, although it worked in Europe. By now, maybe it works. Maybe it doesn't. I don't know."
-
-
 
 Although Android is distributed with free software licenses, Stallman notes that manufacturers can ship the devices with non-free executables, which users cannot replace "because there is a device in the phone that checks if the software is changed and won't let the modified executables run." Stallman calls it "tivoization," because TiVo uses free software but lays down hardware restrictions to prevent it from being altered. "If the manufacturer can replace the executable but you can't, then the product is a jail," he says.
 
