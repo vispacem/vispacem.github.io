@@ -7,7 +7,7 @@ tags: Learn X in Y minutes
 
 From <https://learnxinyminutes.com/docs/ansible>
 
-Licensed under the Creative Commons Attribution 4.0 International
+Licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported 
 
 [![Foo](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
 
