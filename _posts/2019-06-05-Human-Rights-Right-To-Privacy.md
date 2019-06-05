@@ -5,7 +5,7 @@ key: 20190605
 tags: Privacy
 ---
 
-## Human Rights: Right To Privacy
+## Right To Privacy
 
 <div>{%- include extensions/youtube.html id='dxwu389BZlE' -%}</div>
 
