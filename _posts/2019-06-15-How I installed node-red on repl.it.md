@@ -23,7 +23,7 @@ shell.exec('/home/runner/node_modules/node-red/red.js --userDir /home/runner')
 
 *package.json*
 
-```json
+```javascript
 {
   "main": "index.js",
   "dependencies": {
