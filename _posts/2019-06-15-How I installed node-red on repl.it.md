@@ -15,7 +15,7 @@ I only used the next two files:
 
 *index.js*
 
-```
+```javascript
 var RED = require("node-red");
 var shell = require('shelljs');
 shell.exec('/home/runner/node_modules/node-red/red.js --userDir /home/runner')
@@ -23,7 +23,7 @@ shell.exec('/home/runner/node_modules/node-red/red.js --userDir /home/runner')
 
 *package.json*
 
-```
+```json
 {
   "main": "index.js",
   "dependencies": {
