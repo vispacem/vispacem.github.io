@@ -2,7 +2,7 @@
 title: How I installed node-red on repl.it
 date: 2019-06-15 23:15:09 +0000
 key: 20190615
-tags: Privacy
+tags: node-red
 ---
 
 ## How I installed node-red on repl.it
