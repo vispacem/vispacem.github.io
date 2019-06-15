@@ -5,7 +5,7 @@ key: 20190615b
 tags: jupyter
 ---
 
-## How I installed node-red on repl.it
+## How I installed jupyter notebook on repl.it
 
 [The Jupyter Notebook App](https://jupyter.org/) is a server-client application that allows editing and running notebook documents via a web browser.
 
