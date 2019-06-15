@@ -15,9 +15,17 @@ I only used the next file:
 
 *main.py*
 
-```
+```python
 import jupyter
 import request
 import os 
 os.system('/home/runner/.local/bin/jupyter notebook --port=3000 --ip=0.0.0.0 --no-browser')
+```
+
+Remember add the token part to the url page
+
+For example:
+
+```
+https://jupyter--vispacem.repl.co/?token=febef11baf5e99973a875f550d6c8208e7f0b26347199d69
 ```
