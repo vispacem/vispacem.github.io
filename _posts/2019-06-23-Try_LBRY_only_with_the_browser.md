@@ -12,3 +12,5 @@ Try this: [https://beta.lbry.tv](https://beta.lbry.tv)
 ### LBRY in 100 Seconds:
 
 <div>{%- include extensions/youtube.html id='DjouYBEkQPY' -%}</div>
+
+See also:  [spee.ch](https://github.com/lbryio/spee.ch)
