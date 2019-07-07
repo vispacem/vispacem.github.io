@@ -20,9 +20,9 @@ You will see the program with chinese labels. Feel free to fork it and made your
 You are going to need the program ffmpeg.exe inside the folder Tools.  Search for it in sourceforge for example. 
 
 
-To use it just paste the **HSL url** at the top left box of the program. And then press the big button at the left bottom corner.
+To use it just paste the **HLS url** at the top left box of the program. And then press the big button at the left bottom corner.
 
-Now you may be asking yourself "how I get the **HSl url**?" . To do that I use an extension for *Chrome* (also available for *Firefox*) called [Video DownloadHelper](https://www.downloadhelper.net).
+Now you may be asking yourself "how I get the **HLS url**?" . To do that I use an extension for *Chrome* (also available for *Firefox*) called [Video DownloadHelper](https://www.downloadhelper.net).
 
 There are a lot of watch online sites to see movies or TV series, but the one is attract my attention right now is [https://flixtor.to](https://flixtor.to/).
 
