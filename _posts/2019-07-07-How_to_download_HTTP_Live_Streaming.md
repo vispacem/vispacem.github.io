@@ -24,6 +24,6 @@ To use it just paste the **HLS url** at the top left box of the program. And the
 
 Now you may be asking yourself "how I get the **HLS url**?" . To do that I use an extension for *Chrome* (also available for *Firefox*) called [Video DownloadHelper](https://www.downloadhelper.net).
 
-There are a lot of watch online sites to see movies or TV series, but the one is attract my attention right now is [https://flixtor.to](https://flixtor.to/).
+There are a lot of watch online sites to see movies or TV series, but the one is attracting my attention right now is [https://flixtor.to](https://flixtor.to/).
 
 [https://flixtor.to](https://flixtor.to/) do not allow you to download videos if you are not member. So I thing it's worth it to do it in this way.
