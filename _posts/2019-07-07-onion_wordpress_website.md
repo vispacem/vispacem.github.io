@@ -32,9 +32,12 @@ To setup my wordpress site I download the file from <https://wordpress.org/downl
 
 It's a zipped file. I unzipped and rezipped it but without the main folder. In that way the index files will remain in the root of the site.
 
-Register is super easy, just go to <https://hosting.danwin1210.me/register.php>. I did choose <u>PHP</u>  and <u>Random v3 Address</u>. You receive a page with all the information you are going to need next.
+Register is super easy, just go to <https://hosting.danwin1210.me/register.php>. I chose <u>PHP</u>  and <u>Random v3 Address</u>. You receive a page with all the information you are going to need next.
 
 At the bottom of the page you have the link to the <u>FileManager</u>.  At the FileManager upload the previously zipped wordpress code files. Press the unzip button and thats all.
 
 Now if you want to see you site you need to type your onion address in the tor browser, The first time you will be asked for the user and the MySQL Database name. Just use copy and paste from the previous register page.
 
+<b>Bonus:</b>
+
+If you fill the <i>"Clearnet domains"</i> form with yoursite.danwin1210.me your don't need the tor browser, your site is visible and configurable from the clearnet.
