@@ -11,6 +11,11 @@ Very easy way to display websockets with vega-lite
 
 <https://beta.observablehq.com/d/40603915d17a847a>
 
+{% raw %}
+<iframe width="100%" height="600" src="//jsfiddle.net/vispacem/erLnxqdz/1/show/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+{% endraw %}
+
+
 
 
 
