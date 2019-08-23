@@ -6,5 +6,5 @@ tags: clocks
 ---
 
 {% raw %}
-<iframe src="http://clock.leshenko.net" width="1024" height="1024" style="display:block; margin: 0 auto;">&nbsp;</iframe>
+<iframe src="https://clock.leshenko.net" width="1024" height="1024" style="display:block; margin: 0 auto;">&nbsp;</iframe>
 {% endraw %}
