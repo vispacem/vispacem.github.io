@@ -6,5 +6,5 @@ tags: clocks
 ---
 
 {% raw %}
-<iframe src="https://www.teamten.com/lawrence/projects/acrylic-pendulum-clock/visualization.html" width="1024" height="1024" style="display:block; margin: 0 auto;">&nbsp;</iframe>
+<iframe src="https://www.teamten.com/lawrence/projects/acrylic-pendulum-clock/visualization.html" target="_parent" width="1024" height="1024" style="display:block; margin: 0 auto;">&nbsp;</iframe>
 {% endraw %}
