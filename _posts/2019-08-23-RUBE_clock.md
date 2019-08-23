@@ -6,5 +6,5 @@ tags: clocks
 ---
 
 {% raw %}
-<iframe src="https://vispacem.github.io/rubebox2dclock/index.html" width="1024" height="1024" style="display:block; margin: 0 auto;">&nbsp;</iframe>
+<iframe src="https://vispacem.github.io/rubebox2dclock/index.html" width="1024" height="1024" style="display:block; margin: 0 auto;">&nbsp;</iframe> 
 {% endraw %}
