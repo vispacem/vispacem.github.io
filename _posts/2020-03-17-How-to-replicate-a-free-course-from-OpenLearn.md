@@ -7,7 +7,7 @@ tags: OpenLearn
 
 ## How to replicate a free course from OpenLearn to Github pages.
 
-The OpenLearn site free courses are released under the terms of the *Creative Commons license*.
+The **OpenLearn** site free courses are released under the terms of the *Creative Commons license*.
 So this allows us to use the materials throughout the world without payment but for non-commercial purposes only.
 
 Thanks to **Tony Hirst**:
@@ -26,6 +26,6 @@ Here are the steps I followed:
 
 - In the issue form, I clicked the "*Submit new issue*" button, and then waited for the *actions* end.
 
-And that's all. Now the link course is:
+And that's all. Now the course link is:
 
 ### [https://vispacem.github.io/grammar-matters](https://vispacem.github.io/grammar-matters)
